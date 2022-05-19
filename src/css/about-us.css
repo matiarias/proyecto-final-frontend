@@ -6,13 +6,12 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
-    
 }
 
 h1 {
     display: block;
     font-family: monospace,sans-serif;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     white-space: nowrap;
     border-right: 4px solid;
     width: 15ch;
@@ -45,7 +44,23 @@ h1 {
     .p-about-us {
         font-size: 1rem;
     }
-    
+
+    .img-about-us {
+        height: 100%;
+    }
+
+}
+
+@media screen and (min-width: 575px) and (max-width: 768px) {
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    .img-about-us {
+        height: 100%;
+    }
+
 }
 
 

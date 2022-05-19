@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/about-us.css";
-import imagendemuestra from "../assets/imagendemuestra.png";
-import matiArias from "../assets/matiarias-about-us.jpg";
-import benjaGi from '../assets/benjagimenez.jpg'
-import facuAnti from '../assets/facuantivero.jpg'
-import lily from '../assets/liliana.jpg'
+import imagendemuestra from "../assets/perfil-img/imagendemuestra.png";
+import matiArias from "../assets/perfil-img/matiarias-about-us.jpg";
+import benjaGi from '../assets/perfil-img/benjagimenez.jpg'
+import facuAnti from '../assets/perfil-img/facuantivero.jpg'
+import lily from '../assets/perfil-img/liliana.jpg'
 
 const AboutUs = () => {
   return (
