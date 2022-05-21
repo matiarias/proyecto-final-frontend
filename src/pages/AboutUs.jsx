@@ -5,16 +5,17 @@ import matiArias from "../assets/perfil-img/matiarias-about-us.jpg";
 import benjaGi from '../assets/perfil-img/benjagimenez.jpg'
 import facuAnti from '../assets/perfil-img/facuantivero.jpg'
 import lily from '../assets/perfil-img/liliana.jpg'
+import NavBar from "../components/NavBar";
 
 const AboutUs = () => {
   return (
     <>
-      {/* aqui va el componente del navbar */}
+      <NavBar />
 
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-12 col-md-6 col-lg-6">
-            <h1>Sobre Nosotros</h1>
+            <h1 className="about-us-title">Sobre Nosotros</h1>
             <p className="p-about-us">
               Somos un grupo de programadores de RollingCode School, de
               diferentes ciudades de Argentina, con un unico sueño, que es

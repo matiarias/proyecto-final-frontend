@@ -8,7 +8,7 @@
     object-fit: cover;
 }
 
-h1 {
+.about-us-title {
     display: block;
     font-family: monospace,sans-serif;
     font-size: 2.6rem;

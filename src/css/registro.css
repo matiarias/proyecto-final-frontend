@@ -1,0 +1,27 @@
+.card-registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.card-registro img {
+  width: 250px;
+}
+
+.card-background {
+  background-color: #3335;
+}
+
+.registro-title {
+  font-size: 1.5rem;
+}
+
+.link-iniciar-sesion {
+  color: #000;
+  font-size: 1rem;
+}
+
+.link-iniciar-sesion:hover {
+  color: #bb1a1a;
+}

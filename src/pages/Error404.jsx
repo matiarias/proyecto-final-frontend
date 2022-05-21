@@ -1,10 +1,11 @@
 import React from 'react'
 import error404 from '../assets/error404.gif'
+import NavBar from '../components/NavBar';
 
 const Error404 = () => {
     return (
         <>
-            {/* aqui va el componente navbar */}
+            <NavBar />
 
             <div className="container">
                 <div className="row">
