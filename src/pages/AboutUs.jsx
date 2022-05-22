@@ -2,10 +2,11 @@ import React from "react";
 import "../css/about-us.css";
 import imagendemuestra from "../assets/perfil-img/imagendemuestra.png";
 import matiArias from "../assets/perfil-img/matiarias-about-us.jpg";
-import benjaGi from '../assets/perfil-img/benjagimenez.jpg'
-import facuAnti from '../assets/perfil-img/facuantivero.jpg'
-import lily from '../assets/perfil-img/liliana.jpg'
+import benjaGi from "../assets/perfil-img/benjagimenez.jpg";
+import facuAnti from "../assets/perfil-img/facuantivero.jpg";
+import lily from "../assets/perfil-img/liliana.jpg";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
@@ -177,7 +178,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* aqui va el componente del footer */}
+      <Footer />
     </>
   );
 };

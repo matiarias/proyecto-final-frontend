@@ -1,7 +1,5 @@
 .footer-container {
   background: linear-gradient(120deg, #ffe100, #ffffff);
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -9,7 +7,7 @@
   height: 100px;
   width: 150px;
 }
-.navbar-container p {
+.footer-container p {
   font-weight: 500;
 }
 

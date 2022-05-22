@@ -1,25 +1,25 @@
-import React from 'react'
-import error404 from '../assets/error404.gif'
-import NavBar from '../components/NavBar';
+import React from "react";
+import error404 from "../assets/error404.gif";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+import "../css/error404.css";
 
 const Error404 = () => {
-    return (
-        <>
-            <NavBar />
+  return (
+    <>
+      <NavBar />
 
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-md-6 col-lg-8 offset-lg-2">
-                        <img className='img-error404' src={error404} alt="error404" />
-                    </div>
-                </div>
-            </div>
+      <div className="container d-flex justify-content-center align-items-center">
+        <div className="row">
+          <div className="col-12">
+            <img className="img-error404" src={error404} alt="error404" />
+          </div>
+        </div>
+      </div>
 
-            {/* aqui va el componente footer */}
-
-        </>
-
-    );
+      <Footer />
+    </>
+  );
 };
 
-export default Error404
+export default Error404;

@@ -1,0 +1,11 @@
+.img-error404 {
+  height: 550px;
+  width: 550px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 575px) {
+  .img-error404 {
+    height: 300px;
+    width: 300px;
+  }
+}
