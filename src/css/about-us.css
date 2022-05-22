@@ -1,66 +1,62 @@
 .about-us-social-media {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .img-about-us {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .about-us-title {
-    display: block;
-    font-family: monospace,sans-serif;
-    font-size: 2.6rem;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 15ch;
-    animation: typing 2s steps(15), blink .5s infinite step-end alternate;
-    overflow: hidden;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
+  display: block;
+  font-family: monospace, sans-serif;
+  font-size: 2.6rem;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 15ch;
+  animation: typing 2s steps(15), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 
 @keyframes blink {
-    50% {border-color: transparent;}
+  50% {
+    border-color: transparent;
+  }
 }
 
 .p-about-us {
-    font-size: 1.1rem;
-    font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 300px) and (max-width: 575px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 
-    h1 {
-        font-size: 2.5rem;
-    }
+  .p-about-us {
+    font-size: 1rem;
+  }
 
-    .p-about-us {
-        font-size: 1rem;
-    }
-
-    .img-about-us {
-        height: 100%;
-    }
-
+  .img-about-us {
+    height: 100%;
+  }
 }
 
-@media screen and (min-width: 575px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
 
-    h1 {
-        font-size: 2.6rem;
-    }
-
-    .img-about-us {
-        height: 100%;
-    }
-
+  .img-about-us {
+    height: 100%;
+  }
 }
-
-

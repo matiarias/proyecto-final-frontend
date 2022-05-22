@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import "./css/styles.css";
+import "./css/app.css";
 
 import App from './App';
 

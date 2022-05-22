@@ -1,9 +1,18 @@
 .nav {
-    background:linear-gradient(-120deg, #e30061, #d5df00, #475258);
+  background: linear-gradient(-120deg, #e30061, #d5df00, #475258);
 }
 
 .img-nav {
+  height: 50px;
+  width: 90px;
+}
 
-    height: 50px;
-    width: 90px;
+.links-nav {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.links-nav:hover {
+  color: #fff;
 }

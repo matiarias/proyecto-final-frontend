@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "../css/registro.css";
 import LogoRegistro from "../assets/logo-registro.png";
 import { useNavigate, Link } from "react-router-dom";
+import GoogleLogin from "react-google-login";
 
 const Registro = () => {
   const [userValue, setUserValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
-
-  // const [usuarios, setUsuarios] = useState([]);
 
   const userValueChange = ({ target }) => {
     // console.log(target.value);
@@ -22,6 +21,7 @@ const Registro = () => {
 
   const passValueChange = ({ target }) => {
     // console.log(target.value);
+
     setPasswordValue(target.value);
   };
 
@@ -29,8 +29,24 @@ const Registro = () => {
 
   const registrarse = (e) => {
     e.preventDefault();
-    // setUsuarios(...usuarios, userValue)
-    navigate("/");
+    let usuarios = { userValue, emailValue, passwordValue };
+    localStorage.setItem("userForm", JSON.stringify(usuarios));
+    console.log(usuarios);
+
+    navigate("/login");
+  };
+
+  const responseGoogle = (response) => {
+    console.log(response);
+
+    if (response.error) {
+      console.warn("Error en el registro de usuario con google");
+    } else {
+      console.log("Usuario Registrado con google");
+      localStorage.setItem("auth", JSON.stringify(response.accessToken));
+      localStorage.setItem("userGoogle", JSON.stringify(response.profileObj));
+      navigate("/");
+    }
   };
 
   return (
@@ -79,13 +95,23 @@ const Registro = () => {
                     className="form-control"
                     value={passwordValue}
                     onChange={passValueChange}
-                    required
                   />
                 </div>
 
                 <button type="submit" className="btn btn-danger">
                   Registrar
                 </button>
+
+                <div className="google-login-registro text-center my-3">
+                  <GoogleLogin
+                    clientId="877760850378-q81jlodd8ftkpmni94p679p3p8i1v8re.apps.googleusercontent.com"
+                    buttonText="Registrate con Google"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    cookiePolicy={"single_host_origin"}
+                  />
+                </div>
+
                 <div className="text-center">
                   <Link className="link-iniciar-sesion" to="/login">
                     Iniciar Sesión
