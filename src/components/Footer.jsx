@@ -81,7 +81,7 @@ const Footer = () => {
                   <i className="bi bi-twitter icons-social-footer"></i>
                 </Link>
                 <Link to="/error404">
-                  <i className="bi bi-google icons-social-footer"></i>
+                  <i className="bi bi-youtube icons-social-footer"></i>
                 </Link>
                 <Link to="/error404">
                   <i className="bi bi-instagram icons-social-footer"></i>

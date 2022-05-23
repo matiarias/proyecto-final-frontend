@@ -1,0 +1,29 @@
+.card-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.login-title {
+  font-size: 1.5rem;
+}
+
+.link-registrarte {
+  color: #000;
+  font-size: 1rem;
+}
+
+.link-registrarte:hover {
+  color: #bb1a1a;
+}
+
+.img-login {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-bg {
+  background-color: #b1a3af;
+}

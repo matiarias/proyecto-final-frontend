@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../css/registro.css";
-import LogoRegistro from "../assets/logo-registro.png";
+import LogoRegistro from "../assets/logo-registro.jpg";
 import { useNavigate, Link } from "react-router-dom";
-import GoogleLogin from "react-google-login";
+import LoginGoogle from "../components/LoginGoogle";
 
 const Registro = () => {
   const [userValue, setUserValue] = useState("");
@@ -36,28 +36,15 @@ const Registro = () => {
     navigate("/login");
   };
 
-  const responseGoogle = (response) => {
-    console.log(response);
-
-    if (response.error) {
-      console.warn("Error en el registro de usuario con google");
-    } else {
-      console.log("Usuario Registrado con google");
-      localStorage.setItem("auth", JSON.stringify(response.accessToken));
-      localStorage.setItem("userGoogle", JSON.stringify(response.profileObj));
-      navigate("/");
-    }
-  };
-
   return (
     <div className="container">
-      <div className="row card-registro my-5">
+      <div className="row card-registro my-3">
         <div className="col-12 col-md-6">
           <div className="card border-secondary">
-            <div className="d-flex justify-content-center py-3 bg-light">
+            <div>
               <img
                 src={LogoRegistro}
-                className="card-img-top"
+                className="card-img-top img-registro"
                 alt="logo-registro"
               />
             </div>
@@ -66,51 +53,45 @@ const Registro = () => {
               <h5 className="registro-title text-center">Registro</h5>
 
               <form onSubmit={registrarse}>
-                <div className="mb-3">
+                <div className="mb-2">
                   <label className="form-label">Nombre de Usuario</label>
                   <input
                     type="text"
                     className="form-control"
                     value={userValue}
                     onChange={userValueChange}
+                    placeholder="Ingresa tu nombre de usuario"
                     required
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-2">
                   <label className="form-label">Email</label>
                   <input
                     type="email"
                     className="form-control"
                     value={emailValue}
                     onChange={emailValueChange}
+                    placeholder="Ingresa tu email"
                     required
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-2">
                   <label className="form-label">Password</label>
                   <input
                     type="password"
                     className="form-control"
                     value={passwordValue}
                     onChange={passValueChange}
+                    placeholder="Ingresa tu contraseña"
                   />
                 </div>
 
-                <button type="submit" className="btn btn-danger">
+                <button type="submit" className="btn btn-dark">
                   Registrar
                 </button>
-
-                <div className="google-login-registro text-center my-3">
-                  <GoogleLogin
-                    clientId="877760850378-q81jlodd8ftkpmni94p679p3p8i1v8re.apps.googleusercontent.com"
-                    buttonText="Registrate con Google"
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                    cookiePolicy={"single_host_origin"}
-                  />
-                </div>
+                <LoginGoogle />
 
                 <div className="text-center">
                   <Link className="link-iniciar-sesion" to="/login">
